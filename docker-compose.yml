@@ -1,0 +1,22 @@
+version: '3.9'
+
+services:
+  mongodb:
+    image: mongo:latest
+    container_name: mongodb
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: 
+      MONGO_INITDB_ROOT_PASSWORD: 
+    restart: always
+
+
+  api:
+    build:  
+      context: .
+    ports:
+      - 5000:5000
+    restart: always
+    depends_on: 
+      - mongodb
+    volumes:
+      - .:/app
