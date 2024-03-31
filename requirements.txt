@@ -5,7 +5,7 @@ dnspython==2.6.1
 email_validator==2.1.1
 flake8==7.0.0
 Flask==3.0.2
-flask-mongoengine==1.0.0
+flask-mongoengine @ git+https://github.com/idoshr/flask-mongoengine.git@e244408acf440c4208f7ddcd6e5d819cb472e4da
 Flask-RESTful==0.3.10
 Flask-WTF==1.2.1
 idna==3.6
