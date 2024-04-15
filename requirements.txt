@@ -8,7 +8,7 @@ Flask==3.0.2
 flask-mongoengine @ git+https://github.com/idoshr/flask-mongoengine.git@e244408acf440c4208f7ddcd6e5d819cb472e4da
 Flask-RESTful==0.3.10
 Flask-WTF==1.2.1
-idna==3.6
+idna==3.7
 itsdangerous==2.1.2
 Jinja2==3.1.3
 MarkupSafe==2.1.5
