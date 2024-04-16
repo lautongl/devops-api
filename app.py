@@ -1,6 +1,7 @@
 from flask import Flask, jsonify
 from flask_restful import Resource, Api, reqparse
 from flask_mongoengine import MongoEngine
+from mongoengine import NotUniqueError
 import re
 
 app = Flask(__name__)
@@ -93,9 +94,12 @@ class User(Resource):
 
         if not self.validate_cpf(data["cpf"]):
             return {"message": "CPF invalid."}, 400
-        else:
+
+        try:
             response = UserModel(**data).save()
-            return {"message":"User %s successfully created!" % response.id}
+            return {"message": "User %s successfully created!" % response.id}
+        except NotUniqueError:
+            return {"message": "CPF already exists in database"}, 400
 
     def get(self, cpf):
         return {"message": "CPF"}
