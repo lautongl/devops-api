@@ -102,7 +102,7 @@ class User(Resource):
             return {"message": "CPF already exists in database"}, 400
 
     def get(self, cpf):
-        return {"message": "CPF"}
+        return jsonify(UserModel.objects(cpf=cpf))
 
 
 api.add_resource(Users, "/users")
