@@ -86,4 +86,4 @@ class User(Resource):
 
         if response:
             return jsonify(response)
-        return {"message": "User does not exist in database!"}, 400
+        return {"message": "User does not exist in database!!"}, 400
