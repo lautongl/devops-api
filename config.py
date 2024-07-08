@@ -9,3 +9,11 @@ class DevConfig:
         'username': os.getenv('MONGODB_USER'),
         'password': os.getenv('MONGODB_PASSWORD')
     }
+
+
+class MockConfig:
+
+    {
+        'db': 'users',
+        'host': 'mongodb://localhost',
+    }
