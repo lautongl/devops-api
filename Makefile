@@ -1,4 +1,4 @@
-APP = restapi
+APP = devops-api
 
 test:
 	@flake8 . --exclude .venv
@@ -8,5 +8,5 @@ compose: test
 	@docker compose up
 heroku:
 	@heroku container:login
-	@heroku container:push web -a devops-api
-	@heroku container:release -a devops-api web
+	@heroku container:push web -a $(APP)
+	@heroku container:release -a $(APP) web
