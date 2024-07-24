@@ -7,4 +7,4 @@ else:
     app = create_app('config.ProdConfig')
 
 if __name__ == '__main__':
-    app.run(debug=True, host="0.0.0.0")
+    app.run(debug=True, host="0.0.0.0", port=os.getenv('PORT', 5000))
