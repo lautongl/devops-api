@@ -37,3 +37,13 @@ jobs:
         run: make heroku
         env:
           HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
+
+      - name: Check HEROKU_API_KEY
+        run: echo $HEROKU_API_KEY
+        env:
+          HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
+
+      - name: Check Docker login
+        run: docker info
+        env:
+          HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
