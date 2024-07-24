@@ -29,7 +29,11 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - name: Deploy to heroku
+      - name: Set up Heroku
+        env:
+          HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
+        run: echo ${HEROKU_API_KEY} | docker login --username=_ --password-stdin registry.heroku.com
+      - name: Deploy to Heroku
         run: make heroku
         env:
           HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
