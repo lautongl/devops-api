@@ -5,5 +5,7 @@ A RESTful API built with Flask and MongoDB, adaptable for development and produc
 
 ## **Key Features**
 **Tech Stack**: Flask, MongoDB, Python
+
 **Deployment**: Docker, Heroku, MongoDB Atlas, GitHub Actions
+
 **Testing**: Insomnia, Pytest, Flake8
